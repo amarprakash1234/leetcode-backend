@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: leetcode-backend
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      PORT: 3000
+      DB_CONNECT_STRING: "mongodb+srv://prakashamar730:%40amaramar1@codingadda.tcdoc4h.mongodb.net/Leetcode"
+      JWT_KEY: "906cf20819d17605fc274761650597c13ea913c47ca3795eb7848d0a1f5548a4"
+      REDIS_PASS: "OZm0SJrWXuSjuge8QplI1cYrEF5Jx1Jc"
+      JUDGE0_KEY: "f664d90e20msh6357d28956df820p12b16djsne9c49910da1a"
+      GEMINI_KEY: "AIzaSyCMZFF21h4RjcR2pAmQ9rcYqts4RgDmTUg"
+      CLOUDINARY_CLOUD_NAME: "dxnfa3p9f"
+      CLOUDINARY_API_KEY: "215977713843452"
+      CLOUDINARY_API_SECRET: "63CnbQczDP_un7mKyu3X9XfkTeg"
+
+    restart: unless-stopped
